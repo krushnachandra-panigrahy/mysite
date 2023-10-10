@@ -729,8 +729,8 @@ a {
   transition: color 0.6s;
 }
 .cid-tOe3widi9J {
-  padding-top: 3rem;
-  padding-bottom: 1rem;
+  padding-top: 4rem;
+  padding-bottom: 0rem;
   background-color: #2e481a;
 }
 .cid-tOe3widi9J .mbr-fallback-image.disabled {
@@ -802,95 +802,6 @@ a {
 .cid-tOe5fR9KyD .card-box {
   text-align: left;
   color: #000000;
-}
-.cid-tShcu63t1q {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  background-color: #26022f;
-}
-.cid-tShcu63t1q .mbr-iconfont {
-  font-size: 1.2rem !important;
-  font-family: 'Moririse2' !important;
-  color: white;
-  transition: all 0.3s;
-  transform: rotate(180deg);
-}
-.cid-tShcu63t1q .panel-group {
-  border: none;
-}
-.cid-tShcu63t1q .card-header {
-  padding: 1.2rem 0.5rem;
-}
-@media (max-width: 767px) {
-  .cid-tShcu63t1q .card-header {
-    padding: 1rem 0rem;
-  }
-}
-.cid-tShcu63t1q .panel-body {
-  padding: 0 0.5rem;
-  padding-bottom: 1rem;
-}
-@media (max-width: 767px) {
-  .cid-tShcu63t1q .panel-body {
-    padding: 0rem;
-    padding-bottom: 1rem;
-  }
-}
-.cid-tShcu63t1q .img-col {
-  padding: 0;
-}
-.cid-tShcu63t1q .img-item {
-  height: 100%;
-}
-.cid-tShcu63t1q img {
-  height: 100%;
-  object-fit: cover;
-}
-.cid-tShcu63t1q .collapsed span {
-  transform: rotate(0deg);
-}
-.cid-tShcu63t1q .panel-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.cid-tShcu63t1q p {
-  margin-bottom: 0.3rem;
-}
-.cid-tShcu63t1q .panel-title-edit {
-  color: #e9c0e9;
-}
-.cid-tShcu63t1q .card .card-header {
-  background-color: transparent;
-  margin-bottom: 0;
-  border: 0;
-  border-radius: 2rem;
-}
-.cid-tShcu63t1q .card {
-  background: #b0dfe9;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
-}
-@media (max-width: 767px) {
-  .cid-tShcu63t1q .card {
-    padding: 1.5rem;
-  }
-}
-.cid-tShcu63t1q .panel-text {
-  color: #320707;
-}
-.cid-tShcu63t1q .mbr-section-title {
-  text-align: center;
-  color: #ffffff;
-}
-.cid-tShcu63t1q .mbr-section-subtitle {
-  color: #ffffff;
-  text-align: center;
-}
-.cid-tShcu63t1q .panel-title-edit,
-.cid-tShcu63t1q .mbr-iconfont {
-  color: #d70081;
-  text-align: right;
 }
 .cid-tSh69vhouw {
   padding-top: 6rem;
