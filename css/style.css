@@ -220,3 +220,14 @@ li {
 .menu li a:hover {
                    background-color: #555;
                  }
+/* Section style */
+.section {
+    background-color: #ffcc00; /* Background color for highlighting */
+    padding: 10px; /* Add padding for spacing around the title */
+    text-align: left; /* Center-align the text */
+}
+
+.section h2 {
+    margin: 0; /* Remove default margin for the title */
+    color: #333; /* Text color for the title */
+}
