@@ -222,12 +222,12 @@ li {
                  }
 /* Section style */
 .section {
-    background-color: #ffcc00; /* Background color for highlighting */
+    background-color: rgba(0, 51, 102, 0.5); /* Background color for highlighting */
     padding: 10px; /* Add padding for spacing around the title */
     text-align: left; /* Center-align the text */
 }
 
 .section h2 {
     margin: 0; /* Remove default margin for the title */
-    color: #333; /* Text color for the title */
+    color: #FFFFFF; /* Text color for the title */
 }
