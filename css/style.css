@@ -99,7 +99,7 @@ header h1{
             padding: 0 18px;
             display: none;
             overflow: hidden;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 0, 0, 0.01);
         }
 
 /* Subheading style */
