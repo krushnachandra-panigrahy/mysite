@@ -256,44 +256,13 @@ Print ISSN: - <br>
 </section>
 
 
-<!-- Script file for collapsible environment -->
-    <script>
-        const collapsibles = document.querySelectorAll('.collapsible');
-        collapsibles.forEach(collapsible => {
-            collapsible.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const content = this.nextElementSibling;
-                if (content.style.display === 'block') {
-                    content.style.display = 'none';
-                } else {
-                    content.style.display = 'block';
-                }
-            });
-        });
-    </script>
-
 <!-- Visitor counter -->
 <div id="counter-container">
-        <div id="counter" class="counting-animation">0</div>
+        <div id="counter" class="counting-animation">2000</div>
         <div id="count-label">Visitors</div>
     </div>
     
-    <script>
-        let count = 0;
-        let counterElement = document.getElementById("counter");
-        
-        function updateCounter() {
-            count++;
-            counterElement.textContent = count;
-            counterElement.classList.add("counting-animation");
-            setTimeout(() => {
-                counterElement.classList.remove("counting-animation");
-            }, 500);
-        }
-        
-        // Simulate an increment when the page loads (for demonstration purposes)
-        updateCounter();
-</script>
+    <script src="script.js"></script>
 </div>
 </body>
 </html>
