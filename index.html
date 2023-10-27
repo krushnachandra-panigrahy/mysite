@@ -1,3 +1,20 @@
+<?php
+$counterFile = 'counter.txt';
+
+// Check if the counter file exists, and read its content
+if (file_exists($counterFile)) {
+    $count = intval(file_get_contents($counterFile));
+} else {
+    $count = 0;
+}
+
+// Increment the count
+$count++;
+
+// Save the updated count back to the file
+file_put_contents($counterFile, $count);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -257,12 +274,30 @@ Print ISSN: - <br>
 
 
 <!-- Visitor counter -->
+
 <div id="counter-container">
-        <div id="counter" class="counting-animation">2000</div>
+        <div id="counter" class="counting-animation">2428</div>
         <div id="count-label">Visitors</div>
     </div>
     
-    <script src="script.js"></script>
+
+<script src="script.js"></script>
+
+
+<script>
+const collapsibles = document.querySelectorAll('.collapsible');
+        collapsibles.forEach(collapsible => {
+            collapsible.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+</script>
 </div>
 </body>
 </html>

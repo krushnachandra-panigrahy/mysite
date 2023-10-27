@@ -1,4 +1,3 @@
-// Script file for visitor counter 
 document.addEventListener("DOMContentLoaded", function () {
     // Initialize the counter to 0 by default
     var count = 0;
@@ -9,25 +8,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Increment the counter and display it
-    count++;
-    document.getElementById("counter").textContent = count;
+    var counterElement = document.getElementById("counter");
+    var startCount = 1; // Start the animation from 1
+    var endCount = count;
+
+    function updateCounter() {
+        if (startCount <= endCount) {
+            counterElement.textContent = startCount;
+            startCount++;
+            counterElement.classList.add("counting-animation");
+            setTimeout(function () {
+                counterElement.classList.remove("counting-animation");
+                updateCounter(); // Call the function recursively
+            }, 1);
+        }
+    }
+
+    updateCounter(); // Start the counting animation
 
     // Store the updated count in local storage
     localStorage.setItem("visitorCount", count.toString());
 });
-
-
-
-// Script file for collapsible environment 
-const collapsibles = document.querySelectorAll('.collapsible');
-        collapsibles.forEach(collapsible => {
-            collapsible.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const content = this.nextElementSibling;
-                if (content.style.display === 'block') {
-                    content.style.display = 'none';
-                } else {
-                    content.style.display = 'block';
-                }
-            });
-        });
