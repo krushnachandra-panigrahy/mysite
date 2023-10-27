@@ -233,40 +233,7 @@ li {
 }
 
 /* Visitor counter */
-        #counter-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #fff;
-            padding: 10px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            width: 200px; /* Set a specific width */
-            max-width: 80%; /* Limit the maximum width as a percentage of the parent */
-            margin-left: auto; /* Align the container to the left */
-        }
-        
-        #counter {
-            font-size: 64px;
-            font-weight: bold;
-            color: #007BFF;
-            margin-bottom: 20px;
-        }
-        
-        #count-label {
-            font-size: 24px;
-            color: #333;
-        }
-        
-        @keyframes counting {
-            from {
-                transform: scale(1);
-            }
-            to {
-                transform: scale(1.1);
-            }
-        }
-        
-        .counting-animation {
-            animation: counting 0.5s alternate infinite ease-in-out;
+      .counter-wrapper {
+            text-align: right; /* Align the counter to the right */
+            padding: 20px; /* Add some padding to create space on the right */
         }
