@@ -18,8 +18,8 @@ if (localStorage.getItem("visitorCount")) {
 // Add an event listener to increment the counter when the page loads
 window.addEventListener("load", updateCounter);
 
-// Initialize the counter to 0 by default
-var count = 0;
+// Initialize the counter to 1 by default
+var count = 1;
 
 // Check if the counter value is in local storage
 if (localStorage.getItem("visitorCount")) {
