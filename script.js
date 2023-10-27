@@ -1,10 +1,11 @@
 // Script file for visitor counter 
 document.addEventListener("DOMContentLoaded", function () {
+    // Initialize the counter to 0 by default
+    var count = 0;
+
     // Check if the counter value is in local storage
     if (localStorage.getItem("visitorCount")) {
-        var count = parseInt(localStorage.getItem("visitorCount"));
-    } else {
-        var count = 0;
+        count = parseInt(localStorage.getItem("visitorCount"));
     }
 
     // Increment the counter and display it
@@ -14,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Store the updated count in local storage
     localStorage.setItem("visitorCount", count.toString());
 });
+
 
 
 // Script file for collapsible environment 
