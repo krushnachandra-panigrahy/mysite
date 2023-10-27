@@ -231,3 +231,39 @@ li {
     margin: 0; /* Remove default margin for the title */
     color: #FFFFFF; /* Text color for the title */
 }
+
+/* Visitor counter */
+        #counter-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        #counter {
+            font-size: 64px;
+            font-weight: bold;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        
+        #count-label {
+            font-size: 24px;
+            color: #333;
+        }
+        
+        @keyframes counting {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+        
+        .counting-animation {
+            animation: counting 0.5s alternate infinite ease-in-out;
+        }

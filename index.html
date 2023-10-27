@@ -266,6 +266,28 @@ Print ISSN: - <br>
             });
         });
     </script>
+
+<!-- Visitor counter -->
+<div id="counter-container">
+        <div id="counter" class="counting-animation">0</div>
+        <div id="count-label">Visitors</div>
+    </div>
+    
+    <script>
+        let count = 0;
+        let counterElement = document.getElementById("counter");
+        
+        function updateCounter() {
+            count++;
+            counterElement.textContent = count;
+            counterElement.classList.add("counting-animation");
+            setTimeout(() => {
+                counterElement.classList.remove("counting-animation");
+            }, 500);
+        }
+        
+        // Simulate an increment when the page loads (for demonstration purposes)
+        updateCounter();
 </div>
 </body>
 </html>
