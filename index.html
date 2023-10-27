@@ -281,7 +281,7 @@ Print ISSN: - <br>
     </div>
     
 
-<script src="script.js"></script>
+<!--<script src="script.js"></script>-->
 
 
 <script>
@@ -298,7 +298,7 @@ const collapsibles = document.querySelectorAll('.collapsible');
             });
         });
 </script>
-    <script>
+<script>
         // Function to update the counter and store it in local storage
         function updateCounter() {
             var counterElement = document.getElementById("counter");
@@ -318,6 +318,34 @@ const collapsibles = document.querySelectorAll('.collapsible');
 
         // Add an event listener to increment the counter when the page loads
         window.addEventListener("load", updateCounter);
+
+        // Initialize the counter to 0 by default
+        var count = 0;
+
+        // Check if the counter value is in local storage
+        if (localStorage.getItem("visitorCount")) {
+            count = parseInt(localStorage.getItem("visitorCount"));
+        }
+
+        // Increment the counter and display it
+        var counterElement = document.getElementById("counter");
+        var startCount = 1; // Start the animation from 1
+        var endCount = count;
+
+        function updateCounter() {
+            if (startCount <= endCount) {
+                counterElement.textContent = startCount;
+                startCount++;
+                counterElement.classList.add("counting-animation");
+                setTimeout(function () {
+                    counterElement.classList.remove("counting-animation");
+                    updateCounter(); // Call the function recursively
+                }, 1);
+            }
+        }
+
+        // Call the function to start the counting animation
+        updateCounter();
     </script>
 </div>
 </body>
