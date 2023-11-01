@@ -58,19 +58,36 @@ header h1{
 }
 
 /* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 10px;
-}
 
+.clmn {
+            display: flex;
+        }
+
+        .column {
+            flex: 1;
+            float: left;
+            padding: 10px;
+        }
 .left {
   width: 73%;
+align-self: flex-start;
 }
 
 .right {
   width: 27%;
   vertical-align: bottom;
+  align-self: flex-end;
 }
+        .column:first-child {
+            align-self: flex-start;
+        }
+
+        .column:last-child {
+            align-self: flex-end;
+            justify-self: end;
+        }
+
+
 
 /* Clear floats after the columns */
 .row:after {
