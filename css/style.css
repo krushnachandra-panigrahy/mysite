@@ -289,3 +289,14 @@ a {
     animation: typing 3s steps(100, end) 1s 1 normal both;
 }
 
+/* Continuing list number */
+       ol.start { 
+    counter-reset: mycounter; 
+}
+ol.start li, ol.continue li {
+    list-style: none;
+}
+ol.start li:before, ol.continue li:before { 
+    content: counter(mycounter) ". "; 
+    counter-increment: mycounter;
+}
