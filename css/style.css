@@ -53,12 +53,40 @@ header h1{
 
 /* Apply some basic styles to the columns */
     
-.column{
-            float: left;
-            width: 50%;
-            padding: 10px;
-            box-sizing: border-box;
-       }
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 75%;
+}
+
+.right {
+  width: 25%;
+  vertical-align: bottom;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
 
 /* Style the collapsible button */
 
