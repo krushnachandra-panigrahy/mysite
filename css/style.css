@@ -63,7 +63,8 @@ header h1{
             display: flex;
         }
 
-        .column {
+        
+.column {
             flex: 1;
             float: left;
             padding: 10px;
@@ -99,6 +100,7 @@ align-self: flex-start;
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .clmn {
+    display: block;
     width: 100%;
   }
 }
