@@ -326,3 +326,25 @@ ol.start li:before, ol.continue li:before {
     content: counter(mycounter) ". "; 
     counter-increment: mycounter;
 }
+
+/* water-mark <p> element */
+
+    .watermark {
+            position: relative;
+            display: inline-block;
+        }
+
+        .watermark::after {
+            content: var(--watermark-content, "Year");
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: var(--watermark-font-size, 20px); /* Adjust the default font size as needed */
+        }
+
+        .watermark:hover::after {
+            opacity: 0.5;
+        }
