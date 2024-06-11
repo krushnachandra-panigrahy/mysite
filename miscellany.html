@@ -13,7 +13,7 @@
             var minutes = now.getMinutes();
 
             var link = document.getElementById("timedLink");
-            if ((hours === 22 && minutes >= 38) && (hours === 22 && minutes <= 39))
+            if ((hours === 6 && minutes >= 55) && (hours === 7 && minutes <= 9))
             {
                 link.classList.remove("disabled");
                 link.style.color = "blue";
@@ -61,7 +61,7 @@ New users click here
 <b>Topic</b>: <span style="color: Maroon;">Problem solving: Session 2</span><br> 
 <b>Date</b>: 12-06-2024 <b>Time</b>: 07:00 - 08:00<br>
 <p style="font-family:'Courier New'"> 
-<img src="googlemeet.png" width="20" height="20" alt="Googlemeet Logo" style="vertical-align: middle;"> 
+<img src="googlemeet.png" width="20" height="20" class="blinking-text" alt="Googlemeet Logo" style="vertical-align: middle;"> 
 <b>To join the session</b>: 
 <a href="https://meet.google.com/nge-gekh-mvu" target="_blank" id="timedLink" class="disabled" style="color: gray;">
 CLICK HERE 
