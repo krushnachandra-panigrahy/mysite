@@ -13,10 +13,13 @@
             var minutes = now.getMinutes();
 
             var link = document.getElementById("timedLink");
-            if (hours === 7 && minutes >= 0 && minutes <= 10) {
+            if ((hours === 22 && minutes >= 31) || (hours === 22 && minutes <= 32))
+            {
                 link.classList.remove("disabled");
                 link.style.color = "blue";
-            } else {
+            }
+            else 
+            {
                 link.classList.add("disabled");
                 link.style.color = "gray";
             }
@@ -41,7 +44,7 @@
 
 <section>
 <div class="section">
-         <h2> Love to teach </h2>
+         <h2> Service </h2>
 </div>
  <p class="blinking-text">
 <a href="https://forms.gle/592hKDeDcDLMxatUA" target="_blank">
