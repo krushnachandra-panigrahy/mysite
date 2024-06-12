@@ -70,12 +70,12 @@ header h1{
             padding: 10px;
         }
 .left {
-  width: 73%;
+  width: 60%;
 align-self: flex-start;
 }
 
 .right {
-  width: 27%;
+  width: 40%;
   vertical-align: bottom;
   align-self: flex-end;
 }
