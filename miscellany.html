@@ -30,6 +30,42 @@
 
         // Check time every minute to update the link status
         setInterval(checkTime, 60000);
+<script>
+        const scrollContent = document.querySelector('.scroll-content');
+        const itemList = document.getElementById('item-list');
+        const items = itemList.getElementsByTagName('li');
+        const itemHeight = items[0].offsetHeight;
+
+            function adjustScrollHeight() {
+            const totalHeight = itemHeight * items.length;
+            scrollContent.style.height = ${totalHeight*1.5}px;
+            const animationDuration = totalHeight / 20; // Adjust the divisor based on scroll speed
+            scrollContent.style.animationDuration = ${animationDuration}s;
+        }
+
+        window.onload = function() {
+            
+            adjustScrollHeight();
+        };
+    </script>
+        const scrollContent = document.querySelector('.scroll-content');
+        const itemList = document.getElementById('item-list');
+        const items = itemList.getElementsByTagName('li');
+        const itemHeight = items[0].offsetHeight;
+
+            function adjustScrollHeight() {
+            const totalHeight = itemHeight * items.length;
+            scrollContent.style.height = ${totalHeight*1.5}px;
+            const animationDuration = totalHeight / 20; // Adjust the divisor based on scroll speed
+            scrollContent.style.animationDuration = ${animationDuration}s;
+        }
+
+        window.onload = function() {
+            
+            adjustScrollHeight();
+        };
+
+
     </script>
 <body>
     <ul class="menu">
@@ -108,6 +144,18 @@ Click here
 
 </ul> 
 </div>
+<div class="scroll-container">
+            <div class="scroll-content">
+                <ul id="item-list">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                    <!-- Add more list items dynamically as needed -->
+                </ul>
+            </div>
+        </div>
 </p>
 </body>
 </html>
