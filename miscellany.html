@@ -111,24 +111,7 @@ Click here
 </div>
 </div>
 </p>
-<style>
-      .scroll-container {
-            height: 200px; /* Adjust based on the height of the container */
-            overflow: hidden;
-            position: relative;
-        }
-        .scroll-content {
-            display: block;
-            position: absolute;
-            width: 100%;
-            animation: scroll linear infinite; /* Remove duration, it will be calculated dynamically */
-            bottom: 0; /* Start the content at the bottom */
-        }
-        @keyframes scroll {
-            0% { transform: translateY(100%); }
-            100% { transform: translateY(-100%); } /* Scrolls up the height of the content */
-        }
-    </style>
+
 <script>
         const scrollContent = document.querySelector('.scroll-content');
         const itemList = document.getElementById('item-list');
