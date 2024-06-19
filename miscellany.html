@@ -127,7 +127,62 @@ Click here
 </div>
 </div>
 </div>
-
 </p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling List in Right Column</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .left-column {
+            width: 70%;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .right-column {
+            width: 30%;
+            background-color: #d3d3d3;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        .scroll-container {
+            height: 200px; /* Adjust based on the height of the container */
+            overflow: hidden;
+            position: relative;
+        }
+        .scroll-content {
+            display: block;
+            position: absolute;
+            width: 100%;
+            animation: scroll linear infinite; /* Remove duration, it will be calculated dynamically */
+            bottom: 0; /* Start the content at the bottom */
+        }
+        @keyframes scroll {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-100%); } /* Scrolls up the height of the content */
+        }
+        .right-column ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            padding-left: 0; /* Remove default padding */
+        }
+        .right-column li {
+            padding: 10px;
+            background-color: #fff;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            height: 30px; /* Adjust based on your desired item height */
+            box-sizing: border-box; /* Ensure padding and border are included in height calculation */
+        }
+    </style>
+</head>
+
 </body>
 </html>
