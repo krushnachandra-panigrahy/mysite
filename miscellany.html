@@ -129,43 +129,5 @@ Click here
 </div>
 
 </p>
-
-<div class="left-column">
-        <h1>Main Content Area</h1>
-        <p>This is the main content area.</p>
-    </div>
-    <div class="right-column">
-        <h2>Rolling List</h2>
-        <div class="scroll-container">
-            <div class="scroll-content">
-                <ul id="item-list">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                    <li>Item 4</li>
-                    <li>Item 5</li>
-                    <!-- Add more list items dynamically as needed -->
-                </ul>
-            </div>
-        </div>
-    </div>
-    <script>
-        const scrollContent = document.querySelector('.scroll-content');
-        const itemList = document.getElementById('item-list');
-        const items = itemList.getElementsByTagName('li');
-        const itemHeight = items[0].offsetHeight;
-
-            function adjustScrollHeight() {
-            const totalHeight = itemHeight * items.length;
-            scrollContent.style.height = `${totalHeight*1.5}px`;
-            const animationDuration = totalHeight / 20; // Adjust the divisor based on scroll speed
-            scrollContent.style.animationDuration = `${animationDuration}s`;
-        }
-
-        window.onload = function() {
-           
-            adjustScrollHeight();
-        };
-    </script>
 </body>
 </html>
