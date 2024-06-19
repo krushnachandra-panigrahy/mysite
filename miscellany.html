@@ -146,6 +146,24 @@ Click here
             100% { transform: translateY(-100%); } /* Scrolls up the height of the content */
         }
     </style>
+<script>
+        const scrollContent = document.querySelector('.scroll-content');
+        const itemList = document.getElementById('item-list');
+        const items = itemList.getElementsByTagName('li');
+        const itemHeight = items[0].offsetHeight;
+
+            function adjustScrollHeight() {
+            const totalHeight = itemHeight * items.length;
+            scrollContent.style.height = `${totalHeight*1.5}px`;
+            const animationDuration = totalHeight / 20; // Adjust the divisor based on scroll speed
+            scrollContent.style.animationDuration = `${animationDuration}s`;
+        }
+
+        window.onload = function() {
+           
+            adjustScrollHeight();
+        };
+    </script>
 
 </body>
 </html>
