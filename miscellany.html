@@ -3,34 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krushnachandra Panigrahy</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<script>
-        function checkTime() {
-            var now = new Date();
-            var hours = now.getHours();
-            var minutes = now.getMinutes();
-
-            var link = document.getElementById("timedLink");
-            if ((hours === 6 && minutes >= 55) && (hours === 7 && minutes <= 9))
-            {
-                link.classList.remove("disabled");
-                link.style.color = "blue";
-            }
-            else 
-            {
-                link.classList.add("disabled");
-                link.style.color = "gray";
-            }
+    <title>Rolling List in Right Column</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
         }
-
-        // Check time when the page loads
-         window.onload = checkTime;
-
-        // Check time every minute to update the link status
-        setInterval(checkTime, 60000);
-
+        .left-column {
+            width: 70%;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .right-column {
+            width: 30%;
+            background-color: #d3d3d3;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        .scroll-container {
+            height: 200px; /* Adjust based on the height of the container */
+            overflow: hidden;
+            position: relative;
+        }
+        .scroll-content {
+            display: block;
+            position: absolute;
+            width: 100%;
+            animation: scroll linear infinite; /* Remove duration, it will be calculated dynamically */
+            bottom: 0; /* Start the content at the bottom */
+        }
+        @keyframes scroll {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-100%); } /* Scrolls up the height of the content */
+        }
+        .right-column ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            padding-left: 0; /* Remove default padding */
+        }
+        .right-column li {
+            padding: 10px;
+            background-color: #fff;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            height: 30px; /* Adjust based on your desired item height */
+            box-sizing: border-box; /* Ensure padding and border are included in height calculation */
+        }
+    </style>
+</head>
+<body>
+    <div class="left-column">
+        <h1>Main Content Area</h1>
+        <p>This is the main content area.</p>
+    </div>
+    <div class="right-column">
+        <h2>Rolling List</h2>
+        <div class="scroll-container">
+            <div class="scroll-content">
+                <ul id="item-list">
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                    <li>Item 4</li>
+                    <li>Item 5</li>
+                    <!-- Add more list items dynamically as needed -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
         const scrollContent = document.querySelector('.scroll-content');
         const itemList = document.getElementById('item-list');
         const items = itemList.getElementsByTagName('li');
@@ -38,97 +83,15 @@
 
             function adjustScrollHeight() {
             const totalHeight = itemHeight * items.length;
-            scrollContent.style.height = ${totalHeight*1.5}px;
+            scrollContent.style.height = `${totalHeight*1.5}px`;
             const animationDuration = totalHeight / 20; // Adjust the divisor based on scroll speed
-            scrollContent.style.animationDuration = ${animationDuration}s;
+            scrollContent.style.animationDuration = `${animationDuration}s`;
         }
 
         window.onload = function() {
-            
+           
             adjustScrollHeight();
         };
     </script>
-<body>
-    <ul class="menu">
-        <li><a >Miscellany</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="index.html">Home</a></li>
-    </ul>
-<div class="container" style="background-color: rgb(0,0,0,0.01);">
-
-
-<!-- Service -->
-
-<section>
-<div class="section">
-         <h2> ePathasala </h2>
-</div>
- <p class="blinking-text">
-<a href="https://forms.gle/592hKDeDcDLMxatUA" target="_blank">
-Click here to join ePathasala
-</a>
-</p>
-<p class="watermark" style="margin-top: -20px; margin-bottom: -30px; --watermark-content: 'CLASS XI MATHEMATICS'; --watermark-font-size: 40px">
-<div class="column left">
-<h2>Upcoming</h2>
-<ul>
-<li>
-<b>Topic</b>: <span style="color: Maroon;">Problem solving: Session 6</span><br> 
-<b>Date</b>: 20-06-2024 <b>Time</b>: 07:00 - 08:00<br>
-<!-- Begin Meeting Link -->
-<p style="font-family:'Courier New'"> 
-<img src="googlemeet.png" width="20" height="20" class="blinking-text" alt="Googlemeet Logo" style="vertical-align: middle;"> 
-<b>
-<a href="https://meet.google.com/nge-gekh-mvu" target="_blank" id="timedLink" class="disabled blinking-text" style="color: gray;">
-Click here 
-</a> to enter the session</b><br>
-<b>Google Meet link</b>: https://meet.google.com/xnw-uvqj-dgp
-</p>
-<!-- End Meeting Link -->
-</li>
-</ul> 
-</div>
-<div class="column right">
-<div class="section">
-<h2>Completed</h2>
-</div>
-<div class="scroll-container">
-<div class="scroll-content">
-<ul id="item-list">
-<li>
-<b>Topic</b>: <span style="color: Maroon;">Basics of SETS: Session 1</span><br> 
-<b>Date</b>: 08-06-2024 <b>Time</b>: 07:00 - 09:00 <br>
-</li>
-<li>
-<b>Topic</b>: <span style="color: Maroon;">Operations on SETS: Session 2</span><br> 
-<b>Date</b>: 09-06-2024 <b>Time</b>: 07:00 - 09:00 <br>
-</li>
-<li>
-<b>Topic</b>: <span style="color: Maroon;">Problem solving: Session 1</span><br> 
-<b>Date</b>: 11-06-2024 <b>Time</b>: 07:00 - 08:00 <br>
-</li>
-<li>
-<b>Topic</b>: <span style="color: Maroon;">Problem solving: Session 2</span><br> 
-<b>Date</b>: 13-06-2024 <b>Time</b>: 07:00 - 08:00 <br>
-</li>
-<li>
-<b>Topic</b>: <span style="color: Maroon;">Problem solving: Session 3</span><br> 
-<b>Date</b>: 15-06-2024 <b>Time</b>: 07:00 - 09:00 <br>
-</li>
-<li>
-<b>Topic</b>: <span style="color: Maroon;">Problem solving: Session 4</span><br> 
-<b>Date</b>: 16-06-2024 <b>Time</b>: 07:00 - 09:00 <br>
-</li>
-<li>
-<b>Topic</b>: <span style="color: Maroon;">Problem solving: Session 5</span><br> 
-<b>Date</b>: 18-06-2024 <b>Time</b>: 07:00 - 08:00  <br>
-</li>
-</ul> 
-</div>
-</div>
-</div>
-
-</p>
-
 </body>
 </html>
