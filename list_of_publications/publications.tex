@@ -1,0 +1,184 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[top=2cm,left=1cm,right=2cm,bottom=2cm]{geometry}
+%A Few Useful Packages
+\usepackage{longtable}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}% Required for custom colors
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{scbl}{rgb}{0.17,0.22,0.34}
+\usepackage{sectsty} % Allows customization of titles
+\usepackage[big]{layaureo} 	%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+
+%Setup hyperref package, and colours for links
+\usepackage[hidelinks]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+% \definecolor{linkcolour}{rgb}{0,0,0}
+\definecolor{pub}{rgb}{0.0, 0.5, 0.0}
+\definecolor{com}{rgb}{1.0, 0.65, 0.0}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright\color{scbl}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+\usepackage{etaremune}
+\usepackage{enumerate}
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+
+%--------------------TITLE-------------
+% \par{
+\begin{center}
+    \href{https://orcid.org/0000-0003-0067-9298}{\Huge List of Publications}
+\end{center}
+		%\bigskip\par
+	% }\newline
+Scopus ID: \href{https://www.scopus.com/authid/detail.uri?authorId=57203531972}{57203531972} 
+\hfill{ORCID: \href{https://orcid.org/0000-0003-0067-9298}{0000-0003-0067-9298}}
+\vspace{-1cm}
+\section{}
+% \section{Publications}
+% \begin{tabular}{rl}
+\begin{longtable}{lp{15cm}}
+\multicolumn{2}{l}{\color{pub}{\textsc{Published}}}\\[0.2cm]
+\textsc{2025}&
+\vspace{-0.5cm}
+\begin{etaremune}[start=8]
+\item \href{https://arxiv.org/abs/2409.08743}{\it Computation of M-QDR decomposition of tensors and applications}\newline
+{\footnotesize
+{\bf Krushnachandra Panigrahy}, Biswarup Karmakar, 
+Ratikanta Behera, Jajati Keshari Sahoo and Ram N. Mohapatra, \newline
+{\bf Journal of Applied Mathematics and Computing} (\textcolor{cyan}{\bf in press}). \hfill{(SCIE, SCOPUS)}\newline
+% \vspace{-0.5cm}
+. \hfill(MCQ: 0.67 $\&$ IF: 2.4)
+% Article in Press, DOI: \href{https://doi.org/10.1080/03081087.2022.2117771}{10.1080/03081087.2022.2117771}. 
+}
+
+\end{etaremune}\\[-0.5cm]
+\textsc{2023}&
+\vspace{-0.5cm}
+\begin{etaremune}[start=7]
+\item \href{https://doi.org/10.1080/03081087.2022.2117771}{\it A note on numerical ranges of tensors}\newline
+{\footnotesize
+Nirmal Chandra Rout, {\bf Krushnachandra Panigrahy}, Debasisha Mishra \newline
+{\it Linear and Multilinear Algebra}, 71 (2023) 2645-2669.\hfill{(SCIE, SCOPUS)} \newline
+DOI: \href{https://doi.org/10.1080/03081087.2022.2117771}{10.1080/03081087.2022.2117771} \hfill(MCQ: 0.88 $\&$ IF: 1.1)
+}
+
+\item \href{https://doi.org/10.1007/s41478-022-00485-z}{\it A note on a faster fixed point iterative method}\newline
+{\footnotesize
+{\bf Krushnachandra Panigrahy}, Debasisha Mishra \newline
+{\it The Journal of Analysis}, 31 (2023) 831–854.\hfill{(SCOPUS, ESCI)}\newline
+DOI: \href{https://doi.org/10.1007/s41478-022-00485-z}{10.1007/s41478-022-00485-z} \hfill(MCQ: 0.17 $\&$ IF: 0.8)
+}
+\end{etaremune}\\
+\textsc{2022}&
+\vspace{-0.5cm}
+\begin{etaremune}[start=5]
+\item \href{https://doi.org/10.1080/03081087.2021.1952153}{\it On $C$-tensor and its application to eigenvalue localization}\newline
+{\footnotesize
+{\bf Krushnachandra Panigrahy}, Debasisha Mishra, Juan Manuel Pe\~na\newline
+{\it Linear and Multilinear Algebra}, 70 (2022) 6279-6296. \hfill{(SCIE, SCOPUS)}\newline
+DOI: \href{https://doi.org/10.1080/03081087.2021.1952153}{10.1080/03081087.2021.1952153}\hfill(MCQ: 0.88 $\&$ IF: 1.1)
+}
+\item \href{https://doi.org/10.1080/03081087.2020.1748848}{\it Extension of Moore--Penrose inverse of tensor via Einstein product}\newline
+{\footnotesize
+{\bf Krushnachandra Panigrahy}, Debasisha Mishra\newline
+{\it Linear and Multilinear Algebra}, 
+70 (2022) 750-773. \hfill{(SCIE, SCOPUS)}
+DOI:\href{https://doi.org/10.1080/03081087.2020.1748848}{10.1080/03081087.2020.1748848}\hfill(MCQ: 0.88 $\&$ IF: 1.1)
+}
+\end{etaremune}\\
+\textsc{2020}&
+\vspace{-0.5cm}
+\begin{etaremune}
+\item \href{https://doi.org/10.1007/s13398-020-00916-1}{\it On reverse-order law of tensors and its application to additive results on Moore-Penrose inverse}\newline
+{\footnotesize{\bf Krushnachandra Panigrahy},  Debasisha Mishra\newline
+{\it Revista de la Real Academia de Ciencias Exactas, F\'isicas y Naturales. Serie A. Matem\'aticas}. 114 (2020) Article number: 184. \hfill{(SCIE, SCOPUS)}\newline
+DOI: \href{https://doi.org/10.1007/s13398-020-00916-1}{10.1007/s13398-020-00916-1}\hfill(MCQ: 0.95 $\&$ IF: 2.9)
+}
+
+\item \href{https://doi.org/10.1007/s43036-019-00005-0}{\it Reverse-order law for weighted Moore–Penrose inverse of tensors}\newline
+{\footnotesize
+{\bf Krushnachandra Panigrahy},  Debasisha Mishra\newline
+{\it Advances in Operator Theory},  5 (2020) 39-63. \hfill{(SCOPUS, ESCI)}\newline
+DOI: \href{https://doi.org/10.1007/s43036-019-00005-0}{10.1007/s43036-019-00005-0}\hfill(MCQ: 0.49 $\&$ IF: 0.8)
+}
+
+\item \href{https://doi.org/10.1080/03081087.2018.1502252}{\it Reverse-order law for the Moore-Penrose inverses of tensors}\newline
+{\footnotesize 
+{\bf Krushnachandra Panigrahy}, Ratikanta Behera,  Debasisha Mishra\newline
+{\it Linear and Multilinear Algebra},
+68 (2020) 246-264. \hfill{(SCIE, SCOPUS)}\newline
+DOI: \href{https://doi.org/10.1080/03081087.2018.1502252}{10.1080/03081087.2018.1502252}\hfill(MCQ: 0.88 $\&$ IF: 1.1)
+}
+\end{etaremune}\\
+% \multicolumn{2}{l}{\color{com}{\textsc{Communicated}}}\\[0.2cm]
+% & 
+% \vspace{-0.5cm}
+% \begin{enumerate}
+% \item {\it Decomposition of Third-Order Symbolic Tensors for Outer Inverse Computation}, with {\bf Biswarup Karmakar}. ({\bf \textcolor{brown}{communicated}})
+% \item {\it M-QR decomposition and hyperpower iterative methods for computing outer inverses of tensors}, with {\bf Ratikanta Behera}, {\bf Jajati Keshari Sahoo} and {\bf Yimin Wei}. ({\bf \textcolor{brown}{communicated}})
+% \item \emph{A Higher-order Power Iterative Method for Dominant Eigenvalue of Tensors}, with {\bf Singdhashree Nayak}, {\bf Debasisha Mishra} and {\bf Nachiketa Mishra}. ({\bf \textcolor{brown}{communicated}})
+% \item {\it Rapid and Powerful Tensor-based Iterative Methods with Applications}, with {\bf Ratikanta Behera}. (\textcolor{gray}{ready to communicate})
+% \end{enumerate}\\
+\newpage
+\multicolumn{2}{l}{\textsc{Research Preprints}}\\[0.2cm]
+& 
+\vspace{-0.5cm}
+\begin{enumerate}
+\item {\it Decomposition of Third-Order Symbolic Tensors for Outer Inverse Computation}, with {\bf Biswarup Karmakar}. ({\bf \textcolor{brown}{communicated}})
+\item {\it M-QR decomposition and hyperpower iterative methods for computing outer inverses of tensors}, with {\bf Ratikanta Behera}, {\bf Jajati Keshari Sahoo} and {\bf Yimin Wei}. ({\bf \textcolor{brown}{communicated}})
+\item \emph{A Higher-order Power Iterative Method for Dominant Eigenvalue of Tensors}, with {\bf Singdhashree Nayak}, {\bf Debasisha Mishra} and {\bf Nachiketa Mishra}. ({\bf \textcolor{brown}{communicated}})
+\end{enumerate}\\[1cm]
+\multicolumn{2}{l}{\textsc{In progress}}\\[0.2cm]
+& 
+\vspace{-0.5cm}
+\begin{enumerate}
+\item Provisional title: Rapid and Powerful Tensor-based Iterative Methods and its Applications (with {\bf Ratikanta Behera}).
+\item Provisional title: Spectral properties of the products of hypergraphs (with {\bf Sourabha Kumar Sahu, Dinabandhu Pradhan, Ratikanta Behera})
+\item Provisional title: Semi-tensor product of Einstein product and its application (with {\bf Predrag Stanimirovic, Ratikanta Behera})
+% \item Provisional title: (with )
+% \item Provisional title: (with )
+\end{enumerate}
+\end{longtable}
+\end{document}
