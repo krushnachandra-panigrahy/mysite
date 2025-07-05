@@ -387,3 +387,19 @@ ol.start li:before, ol.continue li:before {
             0% { transform: translateY(100%); }
             100% { transform: translateY(-100%); } /* Scrolls up the height of the content */
         }
+/* Research profile color style */
+.google {
+          font-family: Arial, sans-serif;
+          font-size: 48px;
+          font-weight: bold;
+        }
+.google span {
+               display: inline-block;
+               letter-spacing: 0;
+             }
+        .blue { color: #4285F4; }    /* G */
+        .red { color: #EA4335; }     /* o */
+        .yellow { color: #FBBC05; }  /* o */
+        .green { color: #34A853; }   /* g */
+        .gray { color: #5F6368; }    /* Scholar */
+ 
