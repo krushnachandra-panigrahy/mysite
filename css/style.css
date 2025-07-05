@@ -405,7 +405,7 @@ ol.start li:before, ol.continue li:before {
 
 .scopus {
             font-family: Arial, sans-serif;
-            font-size: 20px;
+            font-size: 14px;
             font-weight: bold;
             color: #F47B20; /* Scopus orange */
         }
@@ -413,4 +413,17 @@ ol.start li:before, ol.continue li:before {
                display: inline-block;
                letter-spacing: 0;
              }
+.orcid {
+            font-family: Arial, sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .gray { color: #A6A8AB; }    /* ORC */
+        .green { color: #A6CE39; }   /* iD */
+.researchgate {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #00C4CC; /* ResearchGate teal */
+        }
  
