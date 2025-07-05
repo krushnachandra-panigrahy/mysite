@@ -390,7 +390,7 @@ ol.start li:before, ol.continue li:before {
 /* Research profile color style */
 .google {
           font-family: Arial, sans-serif;
-          font-size: 48px;
+          font-size: 58px;
           font-weight: bold;
         }
 .google span {
@@ -402,4 +402,15 @@ ol.start li:before, ol.continue li:before {
         .yellow { color: #FBBC05; }  /* o */
         .green { color: #34A853; }   /* g */
         .gray { color: #5F6368; }    /* Scholar */
+
+.scopus {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #F47B20; /* Scopus orange */
+        }
+.scopus span {
+               display: inline-block;
+               letter-spacing: 0;
+             }
  
