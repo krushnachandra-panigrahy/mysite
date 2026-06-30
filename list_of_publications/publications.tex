@@ -2,12 +2,11 @@
 \usepackage[top=2cm,left=1cm,right=2cm,bottom=2cm]{geometry}
 %A Few Useful Packages
 \usepackage{longtable}
-\usepackage{amsfonts}
-\usepackage{amsthm}
+\usepackage{amsfonts,amsthm}
 \usepackage{marvosym}
 \usepackage{fontspec} 					%for loading fonts
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
-\RequirePackage{color,graphicx}% Required for custom colors
+\usepackage{color,graphicx}% Required for custom colors
 \usepackage[usenames,dvipsnames]{xcolor}
 \definecolor{scbl}{rgb}{0.17,0.22,0.34}
 \usepackage{sectsty} % Allows customization of titles
@@ -23,6 +22,7 @@
 % \definecolor{linkcolour}{rgb}{0,0,0}
 \definecolor{pub}{rgb}{0.0, 0.5, 0.0}
 \definecolor{com}{rgb}{1.0, 0.65, 0.0}
+\definecolor{source}{rgb}{0.43, 0.21, 0.1}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
 %FONTS
@@ -37,20 +37,17 @@ ItalicFont = Fontin-Italic.otf
 {Fontin.otf}
 %%%
 
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright\color{scbl}}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
-%Tweak a bit the top margin
-%\addtolength{\voffset}{-1.3cm}
 
-%Italian hyphenation for the word: ''corporations''
+
 \hyphenation{im-pre-se}
 
 %-------------WATERMARK TEST [**not part of a CV**]---------------
 \usepackage[absolute]{textpos}
 \usepackage{etaremune}
 \usepackage{enumerate}
+\usepackage{enumitem}
 \setlength{\TPHorizModule}{30mm}
 \setlength{\TPVertModule}{\TPHorizModule}
 \textblockorigin{2mm}{0.65\paperheight}
@@ -76,87 +73,104 @@ Scopus ID: \href{https://www.scopus.com/authid/detail.uri?authorId=57203531972}{
 \hfill{ORCID: \href{https://orcid.org/0000-0003-0067-9298}{0000-0003-0067-9298}}
 \vspace{-1cm}
 \section{}
-% \section{Publications}
-% \begin{tabular}{rl}
+
 \begin{longtable}{lp{15cm}}
 \multicolumn{2}{l}{\color{pub}{\textsc{Published}}(12)}\\[0.2cm]
-\textsc{2025}&
-\vspace{-0.5cm}
-\begin{enumerate}
+\textsc{2026}&
+\vspace{-0.3cm}
+\begin{enumerate}[series=pubs]
 \item \href{https://doi.org/10.1007/s40314-026-03774-6}{\it Projection-based methods for solving multilinear systems}\newline
 {\footnotesize
 {\bf Krushnachandra Panigrahy}, Ratikanta Behera, Jajati Keshari Sahoo,\newline
-{\it Computational and Applied Mathematics}, 45 (2026) Article Number 419.\hfill{(SCIE, SCOPUS)} \newline
+\textcolor{source}{\it Computational and Applied Mathematics}, 45 (2026) Article Number 419.\hfill{(SCIE, SCOPUS)} \newline
 DOI: \href{https://doi.org/10.1007/s40314-026-03774-6}{https://doi.org/10.1007/s40314-026-03774-6} \hfill(MCQ:  $\&$ IF:)
 }
-\item Projesh Nath Choudhury, Krushnachandra Panigrahy. "Positivity of GCD tensors and their determinants." Linear Algebra and its Applications 731 (2026) 22-40. https://doi.org/10.1016/j.laa.2025.11.007
-\item Snigdhashree Nayak, Krushnachandra Panigrahy, Debasisha Mishra, Nachiketa Mishra. "A note on eigenvalue of tensors and its application." Applications of Mathematics 70 (2025) 563-594. https://doi.org/10.21136/AM.2025.0022-25
-\item Ratikanta Behera, Krushnachandra Panigrahy, Jajati Keshari Sahoo and Yimin Wei. "M-QR decomposition and hyperpower iterative methods for computing outer inverses of tensors." Journal of Computational and Applied Mathematics 474 (2026): 116951. [ arXiv ]
+\item \href{ https://doi.org/10.21136/AM.2025.0022-25}{\it Positivity of GCD tensors and their determinants}\newline
+{\footnotesize
+Projesh Nath Choudhury, {\bf Krushnachandra Panigrahy},\newline
+\textcolor{source}{\it Linear Algebra and its Applications}, 731 (2026) 22-40.\hfill{(SCIE, SCOPUS)} \newline
+DOI: \href{https://doi.org/10.1016/j.laa.2025.11.007}{https://doi.org/10.1016/j.laa.2025.11.007} \hfill(MCQ:  $\&$ IF:)
+}
+\item \href{https://doi.org/10.1016/j.cam.2025.116951}{\it M-QR decomposition and hyperpower iterative methods for computing outer inverses of tensors}\newline
+{\footnotesize
+Ratikanta Behera, {\bf Krushnachandra Panigrahy}, Jajati Keshari Sahoo and Yimin Wei,\newline
+\textcolor{source}{\it Journal of Computational and Applied Mathematics}, 474 (2026): 116951. \hfill{(SCIE, SCOPUS)}\newline
+DOI: \href{https://doi.org/10.1016/j.cam.2025.116951}{https://doi.org/10.1016/j.cam.2025.116951}\hfill(MCQ:  $\&$ IF:)
+}
+\end{enumerate}\\
+\textsc{2025}&
+\vspace{-0.3cm}
+\begin{enumerate}[resume=pubs]
+\item  \href{ https://doi.org/10.21136/AM.2025.0022-25}{\it A note on eigenvalue of tensors and its application}\newline
+{\footnotesize
+Snigdhashree Nayak, {\bf Krushnachandra Panigrahy}, Debasisha Mishra, Nachiketa Mishra,\newline
+\textcolor{source}{\it Applications of Mathematics}, 70 (2025) 563-594.\hfill{(SCIE, SCOPUS)} \newline
+DOI: \href{https://doi.org/10.21136/AM.2025.0022-25}{https://doi.org/10.21136/AM.2025.0022-25} \hfill(MCQ:  $\&$ IF:)
+}
 \item \href{https://doi.org/10.1007/s12190-025-02487-z}{\it Computation of M-QDR decomposition of tensors and applications}\newline
 {\footnotesize
 {\bf Krushnachandra Panigrahy}, Biswarup Karmakar, 
 Jajati Keshari Sahoo, Ratikanta Behera and Ram N. Mohapatra, \newline
-{\bf Journal of Applied Mathematics and Computing}, 71 (2025) 437–462. \hfill{(SCIE, SCOPUS)}\newline
-\vspace{-0.5cm}
+\textcolor{source}{\it Journal of Applied Mathematics and Computing}, 71 (2025) 437–462. \hfill{(SCIE, SCOPUS)}\newline
 DOI: \href{https://doi.org/10.1007/s12190-025-02487-z}{https://doi.org/10.1007/s12190-025-02487-z}. \hfill(MCQ: 0.67 $\&$ IF: 2.4)
 }
-\end{enumerate}\\[-0.5cm]
+\end{enumerate}\\
 \textsc{2023}&
-\vspace{-0.5cm}
-\begin{enumerate}
+\vspace{-0.3cm}
+\begin{enumerate}[resume=pubs]
 \item \href{https://doi.org/10.1080/03081087.2022.2117771}{\it A note on numerical ranges of tensors}\newline
 {\footnotesize
 Nirmal Chandra Rout, {\bf Krushnachandra Panigrahy}, Debasisha Mishra \newline
-{\it Linear and Multilinear Algebra}, 71 (2023) 2645-2669.\hfill{(SCIE, SCOPUS)} \newline
-DOI: \href{https://doi.org/10.1080/03081087.2022.2117771}{10.1080/03081087.2022.2117771} \hfill(MCQ: 0.88 $\&$ IF: 1.1)
+\textcolor{source}{\it Linear and Multilinear Algebra}, 71 (2023) 2645-2669.\hfill{(SCIE, SCOPUS)} \newline
+DOI: \href{https://doi.org/10.1080/03081087.2022.2117771}{https://doi.org/10.1080/03081087.2022.2117771} \hfill(MCQ: 0.88 $\&$ IF: 1.1)
 }
 
 \item \href{https://doi.org/10.1007/s41478-022-00485-z}{\it A note on a faster fixed point iterative method}\newline
 {\footnotesize
 {\bf Krushnachandra Panigrahy}, Debasisha Mishra \newline
-{\it The Journal of Analysis}, 31 (2023) 831–854.\hfill{(SCOPUS, ESCI)}\newline
-DOI: \href{https://doi.org/10.1007/s41478-022-00485-z}{10.1007/s41478-022-00485-z} \hfill(MCQ: 0.17 $\&$ IF: 0.8)
+\textcolor{source}{\it The Journal of Analysis}, 31 (2023) 831–854.\hfill{(SCOPUS, ESCI)}\newline
+DOI: \href{https://doi.org/10.1007/s41478-022-00485-z}{https://doi.org/10.1007/s41478-022-00485-z} \hfill(MCQ: 0.17 $\&$ IF: 0.8)
 }
 \end{enumerate}\\
 \textsc{2022}&
-\vspace{-0.5cm}
-\begin{enumerate}
+\vspace{-0.3cm}
+\begin{enumerate}[resume=pubs]
 \item \href{https://doi.org/10.1080/03081087.2021.1952153}{\it On $C$-tensor and its application to eigenvalue localization}\newline
 {\footnotesize
 {\bf Krushnachandra Panigrahy}, Debasisha Mishra, Juan Manuel Pe\~na\newline
-{\it Linear and Multilinear Algebra}, 70 (2022) 6279-6296. \hfill{(SCIE, SCOPUS)}\newline
-DOI: \href{https://doi.org/10.1080/03081087.2021.1952153}{10.1080/03081087.2021.1952153}\hfill(MCQ: 0.88 $\&$ IF: 1.1)
+\textcolor{source}{\it Linear and Multilinear Algebra}, 70 (2022) 6279-6296. \hfill{(SCIE, SCOPUS)}\newline
+DOI: \href{https://doi.org/10.1080/03081087.2021.1952153}{https://doi.org/10.1080/03081087.2021.1952153}\hfill(MCQ: 0.88 $\&$ IF: 1.1)
 }
 \item \href{https://doi.org/10.1080/03081087.2020.1748848}{\it Extension of Moore--Penrose inverse of tensor via Einstein product}\newline
 {\footnotesize
 {\bf Krushnachandra Panigrahy}, Debasisha Mishra\newline
-{\it Linear and Multilinear Algebra}, 
+\textcolor{source}{\it Linear and Multilinear Algebra}, 
 70 (2022) 750-773. \hfill{(SCIE, SCOPUS)}
-DOI:\href{https://doi.org/10.1080/03081087.2020.1748848}{10.1080/03081087.2020.1748848}\hfill(MCQ: 0.88 $\&$ IF: 1.1)
+DOI:\href{https://doi.org/10.1080/03081087.2020.1748848}{https://doi.org/10.1080/03081087.2020.1748848}\hfill(MCQ: 0.88 $\&$ IF: 1.1)
 }
 \end{enumerate}\\
 \textsc{2020}&
-\vspace{-0.5cm}
-\begin{enumerate}
+\vspace{-0.3cm}
+\begin{enumerate}[resume=pubs]
 \item \href{https://doi.org/10.1007/s13398-020-00916-1}{\it On reverse-order law of tensors and its application to additive results on Moore-Penrose inverse}\newline
 {\footnotesize{\bf Krushnachandra Panigrahy},  Debasisha Mishra\newline
-{\it Revista de la Real Academia de Ciencias Exactas, F\'isicas y Naturales. Serie A. Matem\'aticas}. 114 (2020) Article number: 184. \hfill{(SCIE, SCOPUS)}\newline
-DOI: \href{https://doi.org/10.1007/s13398-020-00916-1}{10.1007/s13398-020-00916-1}\hfill(MCQ: 0.95 $\&$ IF: 2.9)
+\textcolor{source}{\it Revista de la Real Academia de Ciencias Exactas, F\'isicas y Naturales. Serie A. Matem\'aticas}. 114 (2020) Article number: 184. \hfill{(SCIE, SCOPUS)}\newline
+DOI: \href{https://doi.org/10.1007/s13398-020-00916-1}{https://doi.org/10.1007/s13398-020-00916-1}\hfill(MCQ: 0.95 $\&$ IF: 2.9)
 }
 
 \item \href{https://doi.org/10.1007/s43036-019-00005-0}{\it Reverse-order law for weighted Moore–Penrose inverse of tensors}\newline
 {\footnotesize
 {\bf Krushnachandra Panigrahy},  Debasisha Mishra\newline
-{\it Advances in Operator Theory},  5 (2020) 39-63. \hfill{(SCOPUS, ESCI)}\newline
-DOI: \href{https://doi.org/10.1007/s43036-019-00005-0}{10.1007/s43036-019-00005-0}\hfill(MCQ: 0.49 $\&$ IF: 0.8)
+\textcolor{source}{\it Advances in Operator Theory},  5 (2020) 39-63. \hfill{(SCOPUS, ESCI)}\newline
+DOI: \href{https://doi.org/10.1007/s43036-019-00005-0}{https://doi.org/10.1007/s43036-019-00005-0}\hfill(MCQ: 0.49 $\&$ IF: 0.8)
 }
 
 \item \href{https://doi.org/10.1080/03081087.2018.1502252}{\it Reverse-order law for the Moore-Penrose inverses of tensors}\newline
 {\footnotesize 
 {\bf Krushnachandra Panigrahy}, Ratikanta Behera,  Debasisha Mishra\newline
-{\it Linear and Multilinear Algebra},
+\textcolor{source}{\it Linear and Multilinear Algebra},
 68 (2020) 246-264. \hfill{(SCIE, SCOPUS)}\newline
-DOI: \href{https://doi.org/10.1080/03081087.2018.1502252}{10.1080/03081087.2018.1502252}\hfill(MCQ: 0.88 $\&$ IF: 1.1)
+DOI: \href{https://doi.org/10.1080/03081087.2018.1502252}{https://doi.org/10.1080/03081087.2018.1502252}\hfill(MCQ: 0.88 $\&$ IF: 1.1)
 }
 \end{enumerate}\\
 % \multicolumn{2}{l}{\color{com}{\textsc{Communicated}}}\\[0.2cm]
