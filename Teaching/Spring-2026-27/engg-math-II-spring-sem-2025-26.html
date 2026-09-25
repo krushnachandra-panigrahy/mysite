@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krushnachandra Panigrahy</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<script>
+        function checkTime() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+
+            var link = document.getElementById("timedLink");
+            if ((hours === 6 && minutes >= 55) && (hours === 7 && minutes <= 9))
+            {
+                link.classList.remove("disabled");
+                link.style.color = "blue";
+            }
+            else 
+            {
+                link.classList.add("disabled");
+                link.style.color = "gray";
+            }
+        }
+
+        // Check time when the page loads
+         window.onload = checkTime;
+
+        // Check time every minute to update the link status
+        setInterval(checkTime, 60000);
+    </script>
+<body>
+    <ul class="menu">
+        <li><a href="../teaching.html">Teaching</a></li>
+        <li><a href="../research.html">Research</a></li>
+        <li><a href="../index.html">Home</a></li>
+    </ul>
+<div class="container" style="background-color: rgb(0,0,0,0.01);">
+
+<!-- Service -->
+<div style="text-align: center;">
+<strong>M201: Engineering Mathematics II <br>
+<em>Spring 2026</em>: Krushnachandra Panigrahy</strong>
+</div>
+
+<ul>
+   <li>Lectures: <ul> 
+                    <li> Mon   09:00 AM – 10:00 AM,  in Room L102. </li>
+                    <li> Mon   10:00 AM – 11:00 AM,  in Room L103. </li>
+                 </ul>
+</li>
+   <li>Office Hours: Mon   04:00 PM – 05:00 PM.</li>
+   <li>Pre-requisites: Basic knowledge of linear algebra.</li>
+   <li>Handout/syllabus: Click on this <a href="#">link</a></li>
+   <li>Course Materials: Click on this <a href="#">link</a></li>
+</ul>
+
+
+</body>
+</html>
